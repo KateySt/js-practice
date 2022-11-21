@@ -1,6 +1,6 @@
 const arrayConverter = (arr) => {
     for (const arrElement of arr) {
-        if (typeof arrElement === 'object') {
+        if (Array.isArray(arrElement)) {
             arr[arr.findIndex((e) => e === arrElement)] = arrayConverter(arrElement);
         }
     }
